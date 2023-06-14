@@ -41,6 +41,7 @@ const GuestRouter = ({ Component }) => {
         <Component />
     )
 }
+
 const SemiProtectedRoute = ({ Component }) => {
     const {isAuth,user}=useSelector((state)=>state.auth);
     if (isAuth && !user.activated) {

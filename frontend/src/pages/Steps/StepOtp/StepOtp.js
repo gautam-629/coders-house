@@ -7,7 +7,7 @@ import { verifyOtp } from '../../../http';
 import { useSelector } from 'react-redux';
 import { setAuth } from '../../../store/AuthSlice';
 import { useDispatch } from 'react-redux';
-const StepOtp = ({Click }) => {
+const StepOtp = ({Click}) => {
  const dispatch=useDispatch();
 
   const[otp,setOtp]=useState('');
@@ -16,11 +16,8 @@ const StepOtp = ({Click }) => {
  async function submit(){
          try {
           const {data}=await verifyOtp({otp:otp,phone:phone,hash:hash});
-          
              dispatch(setAuth(data));
-  
               Click();
-
           console.log(data);
          } catch (error) {
           console.log(error)

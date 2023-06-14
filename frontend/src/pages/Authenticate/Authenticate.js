@@ -8,7 +8,6 @@ const Authenticate = () => {
     }
     const[step,setStep]=useState(1);
     const Step=steps[step];
-
     function startOnNext(){
       setStep(step+1);
     }
@@ -18,5 +17,4 @@ const Authenticate = () => {
     </div>
   )
 }
-
 export default Authenticate;
